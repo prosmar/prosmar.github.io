@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Articles:|:prosmar.github.io</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" content="Prosmar Rusiana software articles project java android linux asterisk bash agi python hibernate hypersql wsdl">
+	<meta name="Keywords" content="Prosmar Rusiana software articles project java android linux asterisk bash agi python hibernate hypersql wsdl">
+	<meta name="Author" content="Prosmar Rusiana">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="shortcut icon" href="https://prosmar.github.io/articles/favicon.png" type="image/x-icon">
+        <link rel="icon" href="https://prosmar.github.io/articles/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/animate.css">	
+	<link rel="stylesheet" href="css/icomoon.css">	
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/modernizr-2.6.2.min.js"></script>
+		
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2 text-left">
+					<div id="fh5co-logo"><a href="index.html">ProNotes<span>.</span></a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li class="active"><a href="index.html">Home</a></li>
+						<li class="has-dropdown">
+							<a href="#">Articles</a>
+							<ul class="dropdown">
+								<li><a href="#">Asterisk-WSDL</a></li>
+								<li><a href="#">PHP-AMI</a></li>
+								<li><a href="#">Java-Hibernate</a></li>
+								<li><a href="#">PHP-AGI</a></li>
+							</ul>
+						</li>
+
+						<li><a href="#">Software</a></li>
+						<li><a href="#">About</a></li>						
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+
+	<header id="fh5co-header" role="banner" style="background: #8BC34A;">
+
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 text-left">
+					<div class="display-t" style="margin-top: -14%;";>
+						<div class="display-tc animate-box" data-animate-effect="fadeInUp">
+						<div id="gadshere" align="center" style="width: 100%;height: 8%;margin-bottom: 6%;">							
+
+						</div>
+							
+							<h1 class="mb30"></h1>
+							<p style="font-size: larger;">
+Linx, Bash, Asterisk , AGI, AMI, Java, Php, Hibernate, WSDL, Android, Python, Hypersql
+</p>
+						</div>						
+					</div>					
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<div id="fh5co-blog" class="fh5co-bg-section" style="font-family: Open Sans, Arial, sans-serif;font-weight: 200;font-size: 15px;line-height: 1.7;color: #828282;">
+	
+			<div data-animate-effect="fadeInUp">
+				<div style="margin-left: 2%;">		
+<span class="fh5co-date">Dec.1st</span>				
+					<h2>Webservices-Java-Hibernate</h2>
+					<p>This section will discuss on how to create database driven webservices using hibernate.</p>
+				</div>
+			</div>
+		<div id="gadds" style="float: right;width: 300px;height: 250px;margin-top: -16%;">
+					
+				</div>
+			
+				<div data-animate-effect="fadeInUp">
+					<div class="fh5co-post">										
+						<p><i>Webservices</i> are endpoints consists of methods. These are often used and consume with the standard <b>XML,SOAP,HTTP</b>. </br>
+
+<b>WSDL</b>, describes as <i>Web Services Description Language</i>. This is one of the most easy to consume using the SOAP UI for testing.</br>
+This way, you will be able to determine the list of methods exposed and its parameters.</br></br>
+
+Lests go directly.
+</br>
+We will be using netbeans ide 8.2. </br>
+Create <b>new project</b>, under File. See image below.
+<image src="images/1.PNG"/>
+Choose <i>"Java Web"</i>.
+</br>Click next, enter the filename you want to name the project. </br>Click next.
+</br>
+<image src="images/2.PNG"/>
+</br>
+For "Server and Settings", we are going to used the default installed along with the netbeans which is the "GlassFish Server 4.1.1".
+</br>
+<image src="images/3.PNG"/></br>
+<image src="images/4.PNG"/>Then click next. Under "Frameworks", select "Hibernate 4.3.1". Click "Finish".
+</br>
+For our database, we are going to use the hypersql. <b>HyperSQL Database (HSQLDB)</b> is a modern relational database system. This is pure java
+code written database. Now, download </b>hypersql</b> <a href="https://sourceforge.net/projects/hsqldb/">https://sourceforge.net/projects/hsqldb/</a> and extract to the directory your want.
+<b>Note</b>: Database created is located inside hsql directory hsqldb/lib.</br></br>
+Go head to the directory hsqldb-2.3.4/hsqldb/bin and double click "<b>runServer</b>". This will start our hypersql database services. </br>
+Below the script executed by windows through windows batch file.</br></br>
+=============</br>
+runServer.bat</br>
+=============
+</br>
+<code>
+cd ..\data</br>
+@java -classpath ..\lib\hsqldb.jar org.hsqldb.util.DatabaseManager %1 %2 %3 %4 %5 %6 %7 %8 %9</br>
+</code>
+</br>
+In linux, the same process. just need to locate the hsqldb directory and fire a command to start up the hypersql services.
+</br>
+Lets go back to netbeans ide. Import hypersqldb jar file to "Libraries" folder.
+</br>
+Under the "<b>Source Packages</b>", create a new package "<b>com.apps.webservices1.db</b>" where to store the hibernate configuration file "<b>hibernate.cfg.xml</b>". 
+</br>It contains all the database connection.</br>
+</p>
+<div>
+=============</br>
+hibernate.cfg.xml</br>
+=============</br>
+<textarea style="margin: 0px; width: 1015px; height: 676px; padding: 2px 4px; font-size: 90%; color: rgb(199, 37, 78); background-color: rgb(249, 242, 244); border-radius: 4px;resize:none;" readonly>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+  <session-factory>   
+    <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+    <property name="hibernate.connection.url">jdbc:hsqldb:hsql://localhost/ws1</property>
+    <property name="hibernate.connection.username">SA</property>
+    <property name="hibernate.connection.password"></property>
+            <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+    <mapping resource="com/apps/webservices1/db/users.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
+</textarea>
+</div>
+</br>
+<p>
+
+Just drag and drop <b>hibernate.cfg.xml</b> to the newly created package. so the package now will be "<b>com.apps.webservices1.db</b>".</br>
+Now, lets create another package called "<b>com.apps.webservices1.users</b>". It is good to put all the classes on specific package.
+<i>Create</i> a new class "<b>Users</b>". It serves as our models for the user details.
+</br>
+</p>
+<div>
+=============</br>
+Users.java</br>
+=============</br>
+<textarea style="margin: 0px; width: 1040px; height: 1510px; padding: 2px 4px; font-size: 90%; color: rgb(199, 37, 78); background-color: rgb(249, 242, 244); border-radius: 4px; resize:none;" readonly>
+
+package com.apps.webservices1.users;
+import java.util.Date;
+/**
+ *
+ * @author user
+ */
+public class Users {
+    private Long id;
+    private Date dateregistered;
+    private String uuid;
+    private String fname;
+    private String mname;
+    private String lname;
+    private String emailadd;
+    private String mobilenum;
+
+    public Users(){}
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }   
+    public String getuuid() {
+        return uuid;
+    }    
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+    public Date getDateregistered() {
+        return dateregistered;
+    }
+    public void setDateregistered(Date dateregistered) {
+        this.dateregistered = dateregistered;
+    }
+    public String getFname() {
+        return fname;
+    }
+    public void setFname(String fname) {
+        this.fname = fname;
+    }
+    public String getMname() {
+        return mname;
+    }
+    public void setMname(String mname) {
+        this.mname = mname;
+    }
+    public String getLname() {
+        return lname;
+    }
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
+    public String getEmailadd() {
+        return emailadd;
+    }
+    public void setEmailadd(String emailadd) {
+        this.emailadd = emailadd;
+    }
+    public String getMobilenum() {
+        return mobilenum;
+    }
+    public void setMobilenum(String mobilenum) {
+        this.mobilenum = mobilenum;
+    }        
+}
+</textarea>
+</div>
+</br>
+
+<p>
+
+Now, lets map the above class to the hibernate. <i>Right click</i> on database package "<b>com.apps.webservices1.db</b>" and <i>Click others</i> for "<b>Hibernate</b>"
+for "<b>File Type</b>" named it "<b>users.hbm</b>" and map "<b>Users.class</b>" for class to map. On search box, search "<b>Users</b>" and click "<b>Finish</b>".
+</br>
+</p>
+<div>
+=============</br>
+users.hbm.xml</br>
+=============</br>
+<textarea style="margin: 0px;width: 1040px;height: 380px;padding: 2px 4px;font-size: 90%;color: rgb(199, 37, 78);background-color: rgb(249, 242, 244);border-radius: 4px;resize:none;" readonly>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.apps.webservices1.users">
+  <class name="Users" table="Users">
+<id name="id" column="logid"><generator class="native"/></id>
+<property name="dateregistered" type="timestamp" column="user_date_registered"/>
+<property name="uuid"/>
+<property name="fname"/>
+<property name="mname"/>
+<property name="lname"/>
+<property name="emailadd"/>
+<property name="mobilenum"/>
+  </class>  
+</hibernate-mapping>
+
+</textarea>
+</div>
+</br>
+
+
+<p>
+Create a file called "<b>HibernateUtil</b>", a helper class that takes care of statup and makes accessing the <i>org.hibernate.SessionFactory</i>
+under <b>package com.apps.webservices1.util</b>.</br>
+</p>
+<div>
+=============</br>
+HibernateUtil.java</br>
+=============</br>
+<textarea style="margin: 0px;width: 1040px;height: 909px;padding: 2px 4px;font-size: 90%;color: rgb(199, 37, 78);background-color: rgb(249, 242, 244);border-radius: 4px;resize:none;" readonly>
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.apps.webservices1.util;
+
+import org.hibernate.SessionFactory;    
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+
+/**
+ *
+ * @author user
+ */
+public class HibernateUtil {
+
+    private static final SessionFactory sessionFactory = buildSessionFactory();
+
+    private static SessionFactory buildSessionFactory() {
+        try {
+                			SessionFactory sessionFactory = new Configuration().configure(
+					"/com/apps/webservices1/db/hibernate.cfg.xml")
+					.buildSessionFactory();
+
+			return sessionFactory;
+        }
+        catch (Throwable ex) {
+            // Make sure you log the exception, as it might be swallowed
+            System.err.println("Initial SessionFactory creation failed." + ex);
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+
+}
+</textarea>
+</div>
+</br>
+<p>
+Now, we already have the following:</br>
+
+<b>hibernate.cfg.xml</b> = Handles the connection to the database</br>
+<b>users.hbm.xml</b> = Mapping class </br>
+<b>Users.java</b> = Model</br>
+<b>HibernateUtil.java</b> =  Takes care of statup and makes accessing the org.hibernate.SessionFactory</br>
+</br>
+
+
+Create a webservice.</br>
+Right click on your project and add webservice. Name it.</br>
+In our example, filename is <b>TestWebservices1</b></br>
+</p>
+<div>
+=============</br>
+TestWebservices1.java</br>
+=============</br>
+<textarea style="margin: 0px;width: 1040px;height: 909px;padding: 2px 4px;font-size: 90%;color: rgb(199, 37, 78);background-color: rgb(249, 242, 244);border-radius: 4px;resize:none;" readonly>
+@WebService(serviceName = "TestWebservices1")
+public class TestWebservices1 {
+    private String status="0";
+    
+    @WebMethod(operationName = "registerCallers")
+    public String registerCallers(
+            @WebParam(name = "uuid") String uuid,
+            @WebParam(name = "fname") String fname,
+            @WebParam(name = "mname") String mname,
+            @WebParam(name = "lname") String lname,
+            @WebParam(name = "emailadd") String emailadd,
+            @WebParam(name = "mobilenum") String mobilenum
+            ){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+        
+        Users user = new Users();
+        user.setUuid(uuid);      
+        user.setFname(fname);
+        user.setMname(mname);
+        user.setLname(lname);
+        user.setEmailadd(emailadd);
+        user.setMobilenum(mobilenum);
+        
+        session.save(user);
+        session.getTransaction().commit();
+        return status;
+    }
+
+    @WebMethod(operationName = "verifyCallers")
+    public String verifyCallers(@WebParam(name ="uuid") String uuid){
+        if(listUsers(uuid).size() > 0){
+            status="1";
+        }        
+        return status;
+    }
+
+    @WebMethod(operationName = "listAllUsers")
+    public String listAllUsers(){
+        String data="";
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+        List result = session.createQuery("from Users").list();
+        data = result.toString();
+        session.getTransaction().commit();
+        return data;
+    }
+
+    private List listUsers(String uuid){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+        List result = session.createQuery("from Users u where u.uuid = :uuidcode")
+                .setString("uuidcode", uuid)
+                .list();                
+        session.getTransaction().commit();
+        return result;
+    }
+
+}
+</textarea>
+</div>
+</br>
+<p>
+There are three anotations in the class, the <b>@Webservice</b>, <b>@WebMethod</b> and <b>@WebParam</b> </br>
+<b>1.</b> @Webservice, service name or class with sequence @WebService(servicename = "class_name")</br>
+<b>2.</b> @WebMethod, is the operation name, @WebMethod(operationName = "method_name")</br>
+<b>3.</b> @WebParam, the paramaters. @WebParam(name = "paramaeters_name")</br>
+
+After creating webservice class, <b>save</b> and <b>run</b> the project.
+Then, fire on the web browser, <a href="http://ipaddress:8080/WebServices1/TestWebservices1?wsdl">http://ipaddress:8080/WebServices1/TestWebservices1?wsdl</a>
+</br>
+That's it. Let me know if you got it and send me an email.
+</p>
+					</div>
+				</div>
+			
+		
+	</div>
+		
+	<footer id="fh5co-footer" role="contentinfo">
+
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2016 prosmar.github.io. All Rights Reserved.</small> 						
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
