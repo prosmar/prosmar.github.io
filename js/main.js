@@ -1,7 +1,8 @@
 ;(function () {
 	
 	'use strict';
-
+$('body').addClass('scrolled');
+$('.js-fh5co-nav-toggle').removeClass('fh5co-nav-white');
 	var isMobile = {
 		Android: function() {
 			return navigator.userAgent.match(/Android/i);
