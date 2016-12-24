@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Articles:|:prosmar.github.io</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" content="Prosmar Rusiana software articles project java android linux asterisk bash agi python hibernate hypersql wsdl">
+	<meta name="Keywords" content="Prosmar Rusiana software articles project java android linux asterisk bash agi python hibernate hypersql wsdl">
+	<meta name="Author" content="Prosmar Rusiana">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="shortcut icon" href="https://prosmar.github.io/articles/favicon.png" type="image/x-icon">
+        <link rel="icon" href="https://prosmar.github.io/articles/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/animate.css">	
+	<link rel="stylesheet" href="css/icomoon.css">	
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/modernizr-2.6.2.min.js"></script>
+		
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2 text-left">
+					<div id="fh5co-logo"><a href="index.html">ProNotes<span>.</span></a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li class="active"><a href="index.html">Home</a></li>
+						<li class="has-dropdown">
+							<a href="#">Articles</a>
+							<ul class="dropdown">
+								<li><a href="#">Asterisk-WSDL</a></li>
+								<li><a href="#">PHP-AMI</a></li>
+								<li><a href="#">Java-Hibernate</a></li>
+								<li><a href="#">PHP-AGI</a></li>
+							</ul>
+						</li>
+
+						<li><a href="#">Software</a></li>
+						<li><a href="#">About</a></li>						
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+
+	<header id="fh5co-header" role="banner" style="background: #8BC34A;">
+
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 text-left">
+					<div class="display-t" style="margin-top: -14%;";>
+						<div class="display-tc animate-box" data-animate-effect="fadeInUp">
+						<div id="gadshere" align="center" style="width: 100%;height: 8%;margin-bottom: 6%;">							
+
+						</div>
+							
+							<h1 class="mb30"></h1>
+							<p style="font-size: larger;">
+Linx, Bash, Asterisk , AGI, AMI, Java, Php, Hibernate, WSDL, Android, Python, Hypersql
+</p>
+						</div>						
+					</div>					
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<div id="fh5co-blog" class="fh5co-bg-section" style="font-family: Open Sans, Arial, sans-serif;font-weight: 200;font-size: 15px;line-height: 1.7;color: #828282;">
+	
+			<div data-animate-effect="fadeInUp">
+				<div style="margin-left: 2%;">		
+<span class="fh5co-date">Dec. 3rd</span>				
+					<h2>Arduino(EthernetShield) - Telephony(Asterisk)</h2>
+					<p>This part will show you some experiments like integrate internet of things to the telephony system(Asterisk).</p>
+				</div>
+			</div>
+		<div id="gadds" style="float: right;width: 300px;height: 250px;margin-top: -16%;">
+					
+				</div>
+			
+				<div data-animate-effect="fadeInUp">
+					<div class="fh5co-post">										
+						<p>
+						<h5>Tools needed:</h5>
+						1. Arduino board</br>
+						2. Arduino Ethernet Shield</br>
+						3. 1 led 5 v</br>
+						4. 320 Ohm Resistor</br>
+						5. 2 1 Pin Male connector</br>
+						6. 1 Lan Cable for the arduino ethernet shield</br>
+						7. Breadboard</br></br>
+						
+						<h5>Goal:</h5>
+						1. To switch on the LED or to play music on speaker whenever there is a call on your telephone line.
+						In this example, we are going to switch on the LED.
+						</br></br>
+						<h5>Now, lets go directly to wiring.</h5>
+						Things to remember, pins <b>10, 11, 12, 13</b> are used by or reserved for interfacing <b>ethernet module</b> so don't use it to plug in your connector over those pins.</br>
+						Pins <b>0, 1, 2, 3, 4, 5, 6, 7, 8</b> are the pins that can be used to interface your application with LED. These are actually your input from your application.
+						</br>
+						Gather all the tools, then follow below steps:</br>
+						1. Position your arduino board. On top are male pins, connect those with the Arduino Ethernet Shield. See the image below.</br>
+						<image src="images/arduinoethernetshield.PNG"/></br>
+						2. Position your LED on the breadboard. Long legged is positive connect it with  the connector to pin in arduino board in number you want from 0 to 8.</br>
+						3. Position your resistor on the breadboard. Short legged of LED connect to the resistor. Other resistor pin connect to ground in arduino board using the connector.</br>
+						Now, the pins will be input that will give voltage to the LED.</br>
+						4. Plug in arduino board to the pc using the usb cable. PC will look for and install its driver. The fastest way to do the installation of driver is to download the PL2303_Prolific_DriverInstaller_v1160.</br>
+						5. Now that it is installed. Verify under device manager of the pc and check on "Ports (COM/LTP)". There must be an entry out there like "COM 4 or COM 3".</br>
+						6. Time for coding, open the arduino application for we can do the coding, compile and upload it to arduino board.</br>
+						
+						This code is intended for devices from egizmo or for egizduino. You may copy and paste the code.
+						</p>
+<div>
+=============</br>
+TriggerOncall.ino</br>
+=============</br>
+<textarea style="margin: 0px; width: 1040px; height: 1510px; padding: 2px 4px; font-size: 90%; color: rgb(199, 37, 78); background-color: rgb(249, 242, 244); border-radius: 4px; resize:none;" readonly>
+						
+#include "etherShield.h"
+
+static uint8_t mymac[6] = {0x54,0x55,0x58,0x10,0x00,0x24}; 
+static uint8_t myip[4] = {192,168,1,179};
+static char baseurl[]="http://192.168.1.179/";
+static uint16_t mywwwport =80; 
+//
+#define BUFFER_SIZE 500
+static uint8_t buf[BUFFER_SIZE+1];
+#define STR_BUFFER_SIZE 22
+static char strbuf[STR_BUFFER_SIZE+1];
+
+EtherShield es=EtherShield();
+
+
+uint16_t print_webpage(uint8_t *buf);
+int8_t analyse_cmd(char *str);
+void setup(){
+   es.ES_enc28j60Init(mymac);
+   es.ES_enc28j60clkout(2); 
+   delay(10);
+        
+	es.ES_enc28j60PhyWrite(PHLCON,0x880);
+	delay(500);
+
+	es.ES_enc28j60PhyWrite(PHLCON,0x990);
+	delay(500);
+	
+	es.ES_enc28j60PhyWrite(PHLCON,0x880);
+	delay(500);
+	
+	es.ES_enc28j60PhyWrite(PHLCON,0x990);
+	delay(500);
+
+  es.ES_enc28j60PhyWrite(PHLCON,0x476);
+	delay(100);
+        
+  es.ES_init_ip_arp_udp_tcp(mymac,myip,80);
+
+ pinMode(7, OUTPUT);
+}
+
+void loop(){
+  uint16_t plen, dat_p;
+  int8_t cmd;
+  plen = es.ES_enc28j60PacketReceive(BUFFER_SIZE, buf);
+
+  if(plen!=0){
+    if(es.ES_eth_type_is_arp_and_my_ip(buf,plen)){
+      es.ES_make_arp_answer_from_request(buf);
+      return;
+    }
+
+    if(es.ES_eth_type_is_ip_and_my_ip(buf,plen)==0){
+      return;
+    }
+    
+    if(buf[IP_PROTO_P]==IP_PROTO_ICMP_V && buf[ICMP_TYPE_P]==ICMP_TYPE_ECHOREQUEST_V){
+      es.ES_make_echo_reply_from_request(buf,plen);
+      return;
+    }
+    
+    if (buf[IP_PROTO_P]==IP_PROTO_TCP_V&&buf[TCP_DST_PORT_H_P]==0&&buf[TCP_DST_PORT_L_P]==mywwwport){
+      if (buf[TCP_FLAGS_P] & TCP_FLAGS_SYN_V){
+         es.ES_make_tcp_synack_from_syn(buf);
+         return;     
+      }
+      
+     if (buf[TCP_FLAGS_P] & TCP_FLAGS_ACK_V){
+       
+        es.ES_init_len_info(buf); 
+        dat_p=es.ES_get_tcp_data_pointer();
+        if (dat_p==0){ 
+          if (buf[TCP_FLAGS_P] & TCP_FLAGS_FIN_V){
+            es.ES_make_tcp_ack_from_any(buf);
+          }
+          return;
+        }
+        if (strncmp("/activate7 ",(char *)&(buf[dat_p+4]),2)==0){
+                plen=print_webpage(buf);
+          lightson(7);
+        }   
+        
+        if (strncmp("/ ",(char *)&(buf[dat_p+4]),2)==0){
+                plen=print_webpage(buf);
+             goto SENDTCP;
+        }
+   
+SENDTCP:  es.ES_make_tcp_ack_from_any(buf); 
+          es.ES_make_tcp_ack_with_data(buf,plen);
+
+      }
+      
+    }
+    
+  }
+        
+}
+uint8_t find_key_val(char *str,char *key)
+{
+        uint8_t found=0;
+        uint8_t i=0;
+        char *kp;
+        kp=key;
+        while(*str &&  *str!=' ' && found==0){
+                if (*str == *kp){
+                        kp++;
+                        if (*kp == '\0'){
+                                str++;
+                                kp=key;
+                                if (*str == '='){
+                                        found=1;
+                                }
+                        }
+                }else{
+                        kp=key;
+                }
+                str++;
+        }
+        if (found==1){
+         
+                while(*str &&  *str!=' ' && *str!='&' && i<STR_BUFFER_SIZE){
+                        strbuf[i]=*str;
+                        i++;
+                        str++;
+                }
+                strbuf[i]='\0';
+        }
+        return(found);
+}
+
+int8_t analyse_cmd(char *str)
+{
+        int8_t r=-1;
+     
+        if (find_key_val(str,"cmd")){
+                if (*strbuf < 0x3a && *strbuf > 0x2f){                    
+                        r=(*strbuf-0x30);
+                }
+        }
+        return r;
+}
+
+
+uint16_t print_webpage(uint8_t *buf)
+{
+        uint16_t plen;
+     		plen=es.ES_fill_tcp_data_p(buf,0,PSTR("HTTP/1.0 200 OK\r\nContent-Type: text/html\r\n\r\n"));
+        return(plen);
+}
+ void triggerPin(int pin){
+  
+  digitalWrite(pin, HIGH);
+  delay(50);
+  digitalWrite(pin, LOW);
+  delay(50);
+}
+void blinklights(int pin){
+  digitalWrite(pin, HIGH);
+  delay(200);
+  digitalWrite(pin, LOW);
+  delay(150);
+}
+
+void lightson(int pin){
+   for(int i=0; i<=10; i++){
+     blinklights(pin);           
+   }   
+}
+</textarea>
+</div>
+
+						<p>
+						7. Compile and upload.
+						Do a testing by browsing on the web, http://192.168.1.179/activate7. Expected the LED will switch on fire a light.</br>
+
+						8. Now, lets try to do an experiment, integrate this with the telephony system asterisk.</br>
+						9. Login to asterisk servers.
+						Create a an agi file under /var/lib/asterisk/agi-bin  and paste the below code:</br>
+			
+<div>			
+<textarea style="margin: 0px; width: 1040px; height: 217px; padding: 2px 4px; font-size: 90%; color: rgb(199, 37, 78); background-color: rgb(249, 242, 244); border-radius: 4px; resize:none;" readonly>
+#!/usr/bin/php -q
+<?php
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "http://192.168.1.179/activate7");
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_exec($ch);
+curl_close($ch);
+?>
+</textarea>
+</div>
+						10. Modify the extensions configuration by putting the below lines;
+
+<div>			
+<textarea style="margin: 0px; width: 1040px; height: 207px; padding: 2px 4px; font-size: 90%; color: rgb(199, 37, 78); background-color: rgb(249, 242, 244); border-radius: 4px; resize:none;" readonly>					
+exten => 1234,1,Answer()
+exten => 1234,n,agi(lightson.agi)
+exten => 1234,n,Hangup()
+</textarea>
+</div>
+						11. Reload your asterisk configuration and dial 1234 from your softphone. LED will light up.
+						</p>
+					</div>
+				</div>
+			
+		
+	</div>
+		
+	<footer id="fh5co-footer" role="contentinfo">
+
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2016 prosmar.github.io. All Rights Reserved.</small> 						
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
